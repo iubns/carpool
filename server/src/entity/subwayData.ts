@@ -1,4 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+} from "typeorm"
 
 @Entity()
 export class SubwayData {
@@ -64,4 +69,10 @@ export class SubwayData {
 
   @Column({ comment: "막차여부" })
   lstcarAt: string
+
+  @CreateDateColumn({
+    type: "timestamp",
+    default: () => "CURRENT_TIMESTAMP(6)",
+  })
+  createAt: Date
 }
