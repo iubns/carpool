@@ -12,3 +12,4 @@ ormconfig.json
 pnpm-lock.yaml
 
 config
+_scripts

@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "export NODE_ENV=development;nodemon src/index.ts",
-    "start": "nodemon src/index.ts",
-    "stop": "pkill -f nodemon"
+    "start": "ts-node src/index.ts",
+    "stop": "pkill -f nodemon",
+    "deploy": "sh _scripts/deploy.sh",
+    "start-server": "sh _scripts/start_server.sh"
   },
   "author": "",
   "license": "ISC",
