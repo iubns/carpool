@@ -1,8 +1,8 @@
 import { DataSource } from "typeorm"
-import { Ex } from "../entity/ex"
+import { SubwayData } from "../entity/subwayData"
 
 const dataSource = new DataSource(require("../../ormconfig.json"))
 
-export const exDatabase = dataSource.getRepository(Ex)
+export const subwayDataDatabase = dataSource.getRepository(SubwayData)
 
 export default dataSource
